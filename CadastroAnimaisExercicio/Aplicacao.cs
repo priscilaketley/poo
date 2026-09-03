@@ -1,5 +1,5 @@
 namespace CadastroAnimaisExercicio;
-
+using CadastroAnimaisExercicio.Entidades;
 public class Aplicacao
 {
     public void Executar()
@@ -51,9 +51,13 @@ public class Aplicacao
         Console.WriteLine();
     }
 
-    private static void CadastrarAnimal()
+    private void CadastrarAnimal()
     {
-        // TODO: implementar a opção 1.
+        var animal = new Animal();
+        animal.Nome = LerTexto("Nome: ");
+        animal.Especie = LerTexto("Espécie: ");
+        animal.Idade = LerInteiro("Idade: ");
+        animal.ExibirDados();
     }
 
     private static void ListarAnimais()
